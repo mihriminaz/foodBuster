@@ -14,6 +14,8 @@
 		197894A21B49B7E6003D0254 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 197894A01B49B7E6003D0254 /* LaunchScreen.xib */; };
 		197894AE1B49B7E6003D0254 /* FoodBustersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197894AD1B49B7E6003D0254 /* FoodBustersTests.swift */; };
 		197894B81B49C464003D0254 /* FoodSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197894B71B49C464003D0254 /* FoodSaveViewController.swift */; };
+		197894BD1B49D0EA003D0254 /* ShortcutFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197894BC1B49D0EA003D0254 /* ShortcutFood.swift */; };
+		197894BF1B49D2A6003D0254 /* FoodCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197894BE1B49D2A6003D0254 /* FoodCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		197894AC1B49B7E6003D0254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		197894AD1B49B7E6003D0254 /* FoodBustersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBustersTests.swift; sourceTree = "<group>"; };
 		197894B71B49C464003D0254 /* FoodSaveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodSaveViewController.swift; sourceTree = "<group>"; };
+		197894BC1B49D0EA003D0254 /* ShortcutFood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortcutFood.swift; sourceTree = "<group>"; };
+		197894BE1B49D2A6003D0254 /* FoodCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		197894911B49B7E6003D0254 /* FoodBusters */ = {
 			isa = PBXGroup;
 			children = (
+				197894BB1B49D0D5003D0254 /* DataModel */,
 				197894941B49B7E6003D0254 /* AppDelegate.swift */,
 				197894B71B49C464003D0254 /* FoodSaveViewController.swift */,
 				1978949B1B49B7E6003D0254 /* Main.storyboard */,
@@ -86,6 +91,7 @@
 				197894A01B49B7E6003D0254 /* LaunchScreen.xib */,
 				197894961B49B7E6003D0254 /* FoodBusters.xcdatamodeld */,
 				197894921B49B7E6003D0254 /* Supporting Files */,
+				197894BE1B49D2A6003D0254 /* FoodCollectionView.swift */,
 			);
 			path = FoodBusters;
 			sourceTree = "<group>";
@@ -113,6 +119,14 @@
 				197894AC1B49B7E6003D0254 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		197894BB1B49D0D5003D0254 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				197894BC1B49D0EA003D0254 /* ShortcutFood.swift */,
+			);
+			name = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,7 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				197894BF1B49D2A6003D0254 /* FoodCollectionView.swift in Sources */,
 				197894B81B49C464003D0254 /* FoodSaveViewController.swift in Sources */,
+				197894BD1B49D0EA003D0254 /* ShortcutFood.swift in Sources */,
 				197894981B49B7E6003D0254 /* FoodBusters.xcdatamodeld in Sources */,
 				197894951B49B7E6003D0254 /* AppDelegate.swift in Sources */,
 			);
