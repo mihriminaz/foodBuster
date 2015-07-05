@@ -11,5 +11,6 @@ import UIKit
 class FoodCollectionView : UICollectionViewCell {
     
     @IBOutlet weak var foodImageView: UIImageView!
+    @IBOutlet weak var foodName: UILabel!
     
 }

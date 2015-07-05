@@ -78,6 +78,12 @@ class FoodSaveViewController: UIViewController, UICollectionViewDataSource, UICo
         self.view.endEditing(true)
     }
     
+    
+    @IBAction func sliderValueChanged(sender: UISlider) {
+        var currentValue = Int(sender.value)
+        self.foodDayLbl.text = "\(currentValue) days"
+    }
+    
     //1
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
@@ -98,6 +104,7 @@ class FoodSaveViewController: UIViewController, UICollectionViewDataSource, UICo
         cell.backgroundColor = UIColor.clearColor()
         //3
         cell.foodImageView.image = UIImage(named:foodData.foodImage!)
+        cell.foodName.text = foodData.foodName
         
         return cell
     }

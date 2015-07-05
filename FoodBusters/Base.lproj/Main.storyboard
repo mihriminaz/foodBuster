@@ -104,39 +104,91 @@
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Xo-9d-6FA">
                                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                                 </imageView>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDj-7q-a2y">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekD-UZ-sg2">
+                                                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="centerX" secondItem="ekD-UZ-sg2" secondAttribute="centerX" constant="42" id="90H-5F-Jit"/>
+                                                                        <constraint firstAttribute="centerY" secondItem="ekD-UZ-sg2" secondAttribute="centerY" constant="0.5" id="AAE-9B-p32"/>
+                                                                        <constraint firstItem="ekD-UZ-sg2" firstAttribute="leading" secondItem="GDj-7q-a2y" secondAttribute="leading" constant="8" id="QlD-vc-nfC"/>
+                                                                        <constraint firstAttribute="height" constant="36" id="umi-I7-Ssv"/>
+                                                                    </constraints>
+                                                                    <variation key="default">
+                                                                        <mask key="subviews">
+                                                                            <exclude reference="ekD-UZ-sg2"/>
+                                                                        </mask>
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="umi-I7-Ssv"/>
+                                                                            <exclude reference="90H-5F-Jit"/>
+                                                                            <exclude reference="AAE-9B-p32"/>
+                                                                            <exclude reference="QlD-vc-nfC"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                                        <mask key="subviews">
+                                                                            <include reference="ekD-UZ-sg2"/>
+                                                                        </mask>
+                                                                        <mask key="constraints">
+                                                                            <include reference="umi-I7-Ssv"/>
+                                                                            <exclude reference="90H-5F-Jit"/>
+                                                                            <include reference="AAE-9B-p32"/>
+                                                                            <include reference="QlD-vc-nfC"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                </view>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </view>
                                                         <constraints>
                                                             <constraint firstItem="4Xo-9d-6FA" firstAttribute="leading" secondItem="uZN-iu-rBz" secondAttribute="leadingMargin" constant="2" id="2Mu-ET-Vep"/>
                                                             <constraint firstItem="4Xo-9d-6FA" firstAttribute="top" secondItem="uZN-iu-rBz" secondAttribute="topMargin" constant="2" id="CSS-Ll-uPw"/>
+                                                            <constraint firstAttribute="bottomMargin" secondItem="GDj-7q-a2y" secondAttribute="bottom" constant="2" id="QXo-Oq-XlS"/>
                                                             <constraint firstAttribute="trailingMargin" secondItem="4Xo-9d-6FA" secondAttribute="trailing" constant="2" id="Ssq-q2-dJd"/>
+                                                            <constraint firstItem="GDj-7q-a2y" firstAttribute="leading" secondItem="uZN-iu-rBz" secondAttribute="leadingMargin" constant="2" id="YfU-lL-Wdb"/>
                                                             <constraint firstAttribute="bottomMargin" secondItem="4Xo-9d-6FA" secondAttribute="bottom" constant="2" id="qGa-Cm-vOw"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="GDj-7q-a2y" secondAttribute="trailing" constant="2" id="uZG-oA-Q0R"/>
                                                         </constraints>
                                                         <variation key="default">
                                                             <mask key="subviews">
                                                                 <exclude reference="4Xo-9d-6FA"/>
+                                                                <exclude reference="GDj-7q-a2y"/>
                                                             </mask>
                                                             <mask key="constraints">
                                                                 <exclude reference="2Mu-ET-Vep"/>
                                                                 <exclude reference="CSS-Ll-uPw"/>
                                                                 <exclude reference="Ssq-q2-dJd"/>
                                                                 <exclude reference="qGa-Cm-vOw"/>
+                                                                <exclude reference="QXo-Oq-XlS"/>
+                                                                <exclude reference="YfU-lL-Wdb"/>
+                                                                <exclude reference="uZG-oA-Q0R"/>
                                                             </mask>
                                                         </variation>
                                                         <variation key="heightClass=regular-widthClass=compact">
                                                             <mask key="subviews">
                                                                 <include reference="4Xo-9d-6FA"/>
+                                                                <include reference="GDj-7q-a2y"/>
                                                             </mask>
                                                             <mask key="constraints">
                                                                 <include reference="2Mu-ET-Vep"/>
                                                                 <include reference="CSS-Ll-uPw"/>
                                                                 <include reference="Ssq-q2-dJd"/>
                                                                 <include reference="qGa-Cm-vOw"/>
+                                                                <include reference="QXo-Oq-XlS"/>
+                                                                <include reference="YfU-lL-Wdb"/>
+                                                                <include reference="uZG-oA-Q0R"/>
                                                             </mask>
                                                         </variation>
                                                         <connections>
                                                             <outlet property="foodImageView" destination="4Xo-9d-6FA" id="TrY-aw-I3f"/>
+                                                            <outlet property="foodName" destination="ekD-UZ-sg2" id="FMP-nS-uA5"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
@@ -209,6 +261,9 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="hPW-c0-2al">
                                         <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
                                         <color key="tintColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="sliderValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="iiU-AQ-Y7K"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                                 <color key="backgroundColor" red="0.11372549019607843" green="0.12549019607843137" blue="0.25490196078431371" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
