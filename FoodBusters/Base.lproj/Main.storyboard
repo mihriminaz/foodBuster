@@ -148,13 +148,27 @@
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </view>
                                                         <constraints>
-                                                            <constraint firstItem="4Xo-9d-6FA" firstAttribute="leading" secondItem="uZN-iu-rBz" secondAttribute="leadingMargin" constant="2" id="2Mu-ET-Vep"/>
-                                                            <constraint firstItem="4Xo-9d-6FA" firstAttribute="top" secondItem="uZN-iu-rBz" secondAttribute="topMargin" constant="2" id="CSS-Ll-uPw"/>
-                                                            <constraint firstAttribute="bottomMargin" secondItem="GDj-7q-a2y" secondAttribute="bottom" constant="2" id="QXo-Oq-XlS"/>
-                                                            <constraint firstAttribute="trailingMargin" secondItem="4Xo-9d-6FA" secondAttribute="trailing" constant="2" id="Ssq-q2-dJd"/>
-                                                            <constraint firstItem="GDj-7q-a2y" firstAttribute="leading" secondItem="uZN-iu-rBz" secondAttribute="leadingMargin" constant="2" id="YfU-lL-Wdb"/>
-                                                            <constraint firstAttribute="bottomMargin" secondItem="4Xo-9d-6FA" secondAttribute="bottom" constant="2" id="qGa-Cm-vOw"/>
-                                                            <constraint firstAttribute="trailingMargin" secondItem="GDj-7q-a2y" secondAttribute="trailing" constant="2" id="uZG-oA-Q0R"/>
+                                                            <constraint firstItem="4Xo-9d-6FA" firstAttribute="leading" secondItem="uZN-iu-rBz" secondAttribute="leadingMargin" constant="2" id="2Mu-ET-Vep">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="-4"/>
+                                                            </constraint>
+                                                            <constraint firstItem="4Xo-9d-6FA" firstAttribute="top" secondItem="uZN-iu-rBz" secondAttribute="topMargin" constant="2" id="CSS-Ll-uPw">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="-4"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="bottomMargin" secondItem="GDj-7q-a2y" secondAttribute="bottom" constant="2" id="QXo-Oq-XlS">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="-2"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="4Xo-9d-6FA" secondAttribute="trailing" constant="2" id="Ssq-q2-dJd">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="-4"/>
+                                                            </constraint>
+                                                            <constraint firstItem="GDj-7q-a2y" firstAttribute="leading" secondItem="uZN-iu-rBz" secondAttribute="leadingMargin" constant="2" id="YfU-lL-Wdb">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="-4"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="bottomMargin" secondItem="4Xo-9d-6FA" secondAttribute="bottom" constant="2" id="qGa-Cm-vOw">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="-4"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="GDj-7q-a2y" secondAttribute="trailing" constant="2" id="uZG-oA-Q0R">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="-4"/>
+                                                            </constraint>
                                                         </constraints>
                                                         <variation key="default">
                                                             <mask key="subviews">

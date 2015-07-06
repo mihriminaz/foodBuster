@@ -13,19 +13,49 @@ class FoodSaveViewController: UIViewController, UICollectionViewDataSource, UICo
     
     @IBOutlet weak var foodCollection: UICollectionView!
     @IBOutlet weak var foodTF: UITextField!
-    
     @IBOutlet weak var numberOfDaysSlider: UISlider!
-    
     @IBOutlet weak var foodDayLbl: UILabel!
     
     private let reuseIdentifier = "FoodCollectionView"
     private let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
-    
     private var foodList = [ShortcutFood]()
+    private var selectedFood = ShortcutFood()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        insertItems()
+        self.foodCollection.reloadData()
+        self.foodCollection.selectItemAtIndexPath(NSIndexPath(forItem: 0, inSection: 0), animated: false, scrollPosition: UICollectionViewScrollPosition.CenteredVertically)
+        setFoodDayLabelValue()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    @IBAction func saveBtnTapped(sender: AnyObject) {
         
+        var savedFood = self.foodTF.text
+        
+        if count(savedFood) == 0 {
+            savedFood = self.foodDayLbl.text
+        }
+        
+        let alertVC : UIAlertController = UIAlertController(title: "Saved!", message: savedFood, preferredStyle: UIAlertControllerStyle.Alert)
+
+        let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
+        }
+        alertVC.addAction(cancelAction)
+        UIApplication.sharedApplication().keyWindow?.rootViewController?.presentViewController(alertVC, animated: true, completion: nil)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func insertItems() {
+    
         let firstFood : ShortcutFood = ShortcutFood()
         firstFood.foodImage = "sugar"
         firstFood.foodName = "Sugar"
@@ -50,20 +80,7 @@ class FoodSaveViewController: UIViewController, UICollectionViewDataSource, UICo
         fifthFood.foodImage = "sugar"
         fifthFood.foodName = "Juice"
         self.foodList.insert(fifthFood, atIndex: 4)
-        self.foodCollection.reloadData()
         
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    @IBAction func saveBtnTapped(sender: AnyObject) {
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool
@@ -81,7 +98,7 @@ class FoodSaveViewController: UIViewController, UICollectionViewDataSource, UICo
     
     @IBAction func sliderValueChanged(sender: UISlider) {
         var currentValue = Int(sender.value)
-        self.foodDayLbl.text = "\(currentValue) days"
+        setFoodDayLabelValue()
     }
     
     //1
@@ -105,7 +122,7 @@ class FoodSaveViewController: UIViewController, UICollectionViewDataSource, UICo
         //3
         cell.foodImageView.image = UIImage(named:foodData.foodImage!)
         cell.foodName.text = foodData.foodName
-        
+
         return cell
     }
 
@@ -123,7 +140,22 @@ class FoodSaveViewController: UIViewController, UICollectionViewDataSource, UICo
             return sectionInsets
     }
 
+    func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
     
+    func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
     
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        self.selectedFood = self.foodList[indexPath.row]
+        self.foodTF.text = ""
+        setFoodDayLabelValue()
+    }
     
+    func setFoodDayLabelValue() {
+        let foodName = self.selectedFood.foodName as String!
+        self.foodDayLbl.text = "\(foodName) for \(Int(self.numberOfDaysSlider.value)) days"
+    }
 }
